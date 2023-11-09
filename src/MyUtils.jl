@@ -25,7 +25,7 @@ end
 """
 Written by @jbrea [https://discourse.julialang.org/t/findall-slow/30247/5]
 """
-function findall2(f, a::Array{T, N}) where {T, N}
+function findall2(f, a::Union{Array{T, N}, SArray}) where {T, N}
     j = 1;
     b = Vector{Int}(undef, length(a));
     @inbounds for i in eachindex(a)
