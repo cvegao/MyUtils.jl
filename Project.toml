@@ -1,0 +1,8 @@
+name = "MyUtils"
+uuid = "53a4b5ef-e664-459a-93ee-870ad0d62e92"
+authors = ["cvegao <constanza.vega@uv.es>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
