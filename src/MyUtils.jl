@@ -38,4 +38,13 @@ function findall2(f, a::Union{AbstractVector, Array{T, N}}) where {T, N}
     sizehint!(b, length(b));
     return b
 end
+
+# Standard error
+function ste(x)
+    if mean(x) > 0.0
+        return std(x) / sqrt(mean(x)) 
+    else
+        return 0.0
+    end
+end
 end
