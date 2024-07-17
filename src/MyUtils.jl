@@ -2,7 +2,7 @@ module MyUtils
 
 using Distributions, StaticArrays
 
-export rand!, parseSMatrix, findall2
+export ste, rand!, parseSMatrix, findall2
 
 function rand!(A::Array, distribution::Distribution)
     for i in eachindex(A)
