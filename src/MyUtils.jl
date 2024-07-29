@@ -2,7 +2,7 @@ module MyUtils
 
 using Distributions, StaticArrays
 
-export ste, rand!, parseSMatrix, findall2
+export ste, rand!, parseSMatrix, findall2, getShannon
 
 function rand!(A::Array, distribution::Distribution)
     for i in eachindex(A)
@@ -46,5 +46,12 @@ function ste(x)
     else
         return 0.0
     end
+end
+
+# Shannon index
+function getShannon(B)
+    N = sum(B)
+    p = B[B.>1e-12] ./ N
+    return -sum(p .* log.(p))
 end
 end
